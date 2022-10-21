@@ -36,16 +36,12 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar-maven-plugin.version>3.8.0.2131</sonar-maven-plugin.version>
-    <spring-framework.version>5.2.15.RELEASE</spring-framework.version>
-    <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
-    <spring-data.version>2.3.9.RELEASE</spring-data.version>
+    <spring-boot.version>2.4.13</spring-boot.version>
     <h2.version>1.4.190</h2.version>
-    <junit-jupiter.version>5.7.1</junit-jupiter.version>
     <jacoco.version>0.8.8</jacoco.version>
     <commons-dbcp.version>1.4</commons-dbcp.version>
     <camel.version>2.25.1</camel.version>
     <guava.version>19.0</guava.version>
-    <mockito.version>3.5.6</mockito.version>
     <htmlunit.version>2.22</htmlunit.version>
     <guice.version>4.0</guice.version>
     <mongo-java-driver.version>3.12.8</mongo-java-driver.version>
@@ -241,43 +237,11 @@
         <scope>test</scope>
       </dependency>
       <dependency>
-        <groupId>org.junit</groupId>
-        <artifactId>junit-bom</artifactId>
-        <version>${junit-jupiter.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-core</artifactId>
-        <version>${mockito.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-inline</artifactId>
-        <version>${mockito.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-junit-jupiter</artifactId>
-        <version>${mockito.version}</version>
-      </dependency>
-      <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>${spring-boot.version}</version>
         <type>pom</type>
         <scope>import</scope>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>${spring-data.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-webmvc</artifactId>
-        <version>${spring-framework.version}</version>
       </dependency>
       <dependency>
         <groupId>com.h2database</groupId>
