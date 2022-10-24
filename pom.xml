@@ -36,7 +36,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <sonar-maven-plugin.version>3.8.0.2131</sonar-maven-plugin.version>
-    <spring-boot.version>2.6.13</spring-boot.version>
+    <spring-boot.version>2.7.5</spring-boot.version>
     <h2.version>1.4.190</h2.version>
     <jacoco.version>0.8.8</jacoco.version>
     <commons-dbcp.version>1.4</commons-dbcp.version>
@@ -50,7 +50,6 @@
     <aws-lambda-java-events.version>2.0.1</aws-lambda-java-events.version>
     <system-lambda.version>1.1.0</system-lambda.version>
     <urm.version>2.0.0</urm.version>
-    <byte-buddy.version>1.11.5</byte-buddy.version>
     <javassist.version>3.27.0-GA</javassist.version>
     <maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
     <maven-checkstyle-plugin.version>3.1.0</maven-checkstyle-plugin.version>
@@ -223,18 +222,6 @@
   </repositories>
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>net.bytebuddy</groupId>
-        <artifactId>byte-buddy</artifactId>
-        <version>${byte-buddy.version}</version>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <groupId>net.bytebuddy</groupId>
-        <artifactId>byte-buddy-agent</artifactId>
-        <version>${byte-buddy.version}</version>
-        <scope>test</scope>
-      </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
