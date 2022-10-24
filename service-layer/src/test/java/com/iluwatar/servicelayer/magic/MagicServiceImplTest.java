@@ -26,11 +26,10 @@ package com.iluwatar.servicelayer.magic;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Matchers.eq;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
-import static org.mockito.Mockito.verifyZeroInteractions;
 import static org.mockito.Mockito.when;
 
 import com.iluwatar.servicelayer.spell.Spell;
@@ -56,7 +55,7 @@ class MagicServiceImplTest {
     final var spellDao = mock(SpellDao.class);
 
     final var service = new MagicServiceImpl(wizardDao, spellbookDao, spellDao);
-    verifyZeroInteractions(wizardDao, spellbookDao, spellDao);
+    verifyNoMoreInteractions(wizardDao, spellbookDao, spellDao);
 
     service.findAllWizards();
     verify(wizardDao).findAll();
@@ -70,7 +69,7 @@ class MagicServiceImplTest {
     final var spellDao = mock(SpellDao.class);
 
     final var service = new MagicServiceImpl(wizardDao, spellbookDao, spellDao);
-    verifyZeroInteractions(wizardDao, spellbookDao, spellDao);
+    verifyNoMoreInteractions(wizardDao, spellbookDao, spellDao);
 
     service.findAllSpellbooks();
     verify(spellbookDao).findAll();
@@ -84,7 +83,7 @@ class MagicServiceImplTest {
     final var spellDao = mock(SpellDao.class);
 
     final var service = new MagicServiceImpl(wizardDao, spellbookDao, spellDao);
-    verifyZeroInteractions(wizardDao, spellbookDao, spellDao);
+    verifyNoMoreInteractions(wizardDao, spellbookDao, spellDao);
 
     service.findAllSpells();
     verify(spellDao).findAll();
@@ -110,7 +109,7 @@ class MagicServiceImplTest {
 
 
     final var service = new MagicServiceImpl(wizardDao, spellbookDao, spellDao);
-    verifyZeroInteractions(wizardDao, spellbookDao, spellDao, spellbook);
+    verifyNoMoreInteractions(wizardDao, spellbookDao, spellDao, spellbook);
 
     final var result = service.findWizardsWithSpellbook(bookname);
     verify(spellbookDao).findByName(eq(bookname));
@@ -143,7 +142,7 @@ class MagicServiceImplTest {
     when(spellDao.findByName(eq(spellName))).thenReturn(spell);
 
     final var service = new MagicServiceImpl(wizardDao, spellbookDao, spellDao);
-    verifyZeroInteractions(wizardDao, spellbookDao, spellDao, spellbook);
+    verifyNoMoreInteractions(wizardDao, spellbookDao, spellDao, spellbook);
 
     final var result = service.findWizardsWithSpell(spellName);
     verify(spellDao).findByName(eq(spellName));
